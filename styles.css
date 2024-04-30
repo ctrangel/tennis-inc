@@ -1,49 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5f5;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav {
-    background-color: #636863;
-    
+  background-color: rgba(48, 47, 47, 0.5);
+  /* Semi-transparent white background */
+  backdrop-filter: blur(5px);
+  /* Blur effect for a frosted glass look */
+  padding: 10px;
+  /* Padding for spacing inside the navbar */
 }
+
+/* @media (max-width: 992px) {
+  nav {
+    background-color: rgb(255, 255, 255);
+  }
+} */
+
+
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: center;
+  }
+}
+
+
 
 ul li a {
-    color: white !important;
+  color: white !important;
+  margin-right: 2em;
 }
 
-#header {
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    height: 20em;
+ul li a:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px hsl(0, 0, 80%);
+}
 
+
+
+#header {
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  height: 20em;
+}
+
+#header h1 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  transition: all 0.3s;
+}
+
+#header h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px hsl(0, 0, 80%);
 }
 
 #header-img {
-    z-index: -1000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20em;
-    display: block;
-    object-fit: cover;
-
+  z-index: -1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20em;
+  display: block;
+  object-fit: cover;
 }
